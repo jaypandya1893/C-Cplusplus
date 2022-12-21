@@ -1,7 +1,9 @@
 #include<stdio.h>
+#include<string.h>
+
 void Total (int price,int qty);
 void menu();
-
+int pcall=0;
 void menu()
 {	
 
@@ -61,16 +63,19 @@ int qty,price;
 
 void Total (int price,int qty)
 {
-	int y[10],call;
+	int call;
+	char cv[10];
 	call=price*qty;
-	printf("Total Amount In RS. : %d\n",call);
+	pcall=call+pcall;
+	printf("Amount In RS. : %d\n",call);
+	printf("Total Amount In RS. : %d\n",pcall);
 	
 	printf("Do You Want To ADD More [y/n]: ");
-	scanf("%s",&y);
-	if("y" =="y")
+	scanf("%s",&cv);
+	
+	if(!strcmp(cv,"y"))
 	{
 	menu();
-	
 	}
 	else
 	{
@@ -80,6 +85,7 @@ void Total (int price,int qty)
 
 int main()
 {
+	
 	menu();
 
 }
