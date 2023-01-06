@@ -11,6 +11,6 @@ for(i=1;i<=no;i++)
 {
 ch*=i;
 }
-printf("FACTORIAL OF %d:",ch);
+printf("FACTORIAL OF %d:%d",no,ch);
 return 0;
 }

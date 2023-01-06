@@ -3,7 +3,7 @@
 
 int main()
 {
-	int num[4],reverse,a;
+	char num[4],reverse,a;
 	
 	printf("Enter Four digit Number:");
 	gets(num);
